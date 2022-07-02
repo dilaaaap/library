@@ -1,0 +1,145 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif
+}
+html,body{
+    margin:0;
+    height:100%;
+    background-color:lightgray;
+}
+
+button:hover, #top1:hover, #top2:hover {
+    filter:brightness(80%);
+}
+
+
+button:active, #top1:active, #top2:active{
+    filter:brightness(100%)
+}
+/*header*/
+header{
+    background-color: white;
+    display:flex;
+    justify-content:space-between;
+    font-size:32px;
+    padding:10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+header button{
+    border:none;
+    font-size:20px;
+    background-color:black;
+    color:white;
+    border-radius:10px;
+    padding:10px;
+}
+.loginHolder,.addBookHolder{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.loginPopup,.addBookPopup{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
+    width: 100%;
+  }
+.formPopup,.formBookPopup{
+    display:none;
+    position:fixed;
+    left:50%;
+    top:25%;
+    transform:translate(-50%,5%);
+    border: 3px solid #999999;
+    z-index: 9;
+}
+.formContainer{
+    max-width:300px;
+    padding:20px;
+    background-color:#fff;
+}
+.formContainer input[type=text],.formContainer input[type=password],.formContainer input[type = number]{
+    width:90%;
+    padding:15px ;
+    margin:5px 0 20px 0;
+    border: none;
+    background: #eee;
+}
+.formContainer input[type=checkbox]{
+    padding:15px;
+    margin:5px 0 20px 0;
+    
+}
+.formContainer input[type=text]:focus,
+      .formContainer input[type=password]:focus, .formContainer input[type=number] {
+        background-color: #ddd;
+        outline: none;
+      }
+.formContainer .btn {
+        padding: 12px 20px;
+        border: none;
+        background-color: #8ebf42;
+        color: #fff;
+        cursor: pointer;
+        width: 100%;
+        margin-bottom: 15px;
+        opacity: 0.8;
+      }
+.formContainer .cancel {
+        background-color: #cc0000;
+      }
+.formContainer .btn:hover,
+      .openButton:hover {
+        opacity: 1;
+      }
+/*main*/
+main{
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+}
+main button,.remove,.readUnread{
+    border:none;
+    font-size:20px;
+    background-color:black;
+    color:white;
+    border-radius:10px;
+    padding:10px;
+}
+.card{
+    border:none;
+    font-size:20px;
+    background-color:white;
+    border-radius:10px;
+    padding:10px;
+    text-align:center;
+}
+.bookHolder{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-rows: repeat(2,1fr); 
+    gap:10px;
+}
+.addBook{
+    margin:10px;
+}
+.addHolder{
+    display:flex;
+    justify-content:center;
+}
+/*footer*/
+footer{
+    background-color:black;
+    color:white;
+    bottom:0;
+    position:absolute;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    font-size:20px;
+}
+footer div{
+    padding:10px;
+}
